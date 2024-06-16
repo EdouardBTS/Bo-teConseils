@@ -53,13 +53,19 @@ public class IhmResponsable extends JFrame implements ActionListener {
 		pan.add(labelSaisie);
 		pan.add(zoneConseil);
 		pan.add(boutonOK);
-		
+		boutonOK.addActionListener(this);
+		combo.addActionListener(this);
 		setVisible(true);
 	}
 	
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
+public void actionPerformed(ActionEvent evt) {
+		String option = (String)combo.getSelectedItem();
+		if(evt.getSource() == boutonOK) {
 		
+			String libelle = zoneConseil.getText(); 	
+		refResp.ajouterConseil(libelle,option);
+		}
 	}
 
 	public void setRefResponsable(Responsable resp) {

@@ -14,7 +14,7 @@ public class MainGestConseil {
 
 		// 2eme etape: Connexion a la BDD
 		//bdd.connecterBdd("jdbc:mysql://localhost/M2LAssoc","root","");
-		bdd.connecterBdd("jdbc:mysql://localhost/m2lassoc","root","");
+		bdd.connecterBdd("jdbc:mysql://localhost/m2lassoc?useSSL=false","root","");
 		
 		// 3eme etape: Creation du conteneur de requete
 		bdd.creerStatement();

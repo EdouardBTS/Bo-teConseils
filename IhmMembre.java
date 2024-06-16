@@ -68,13 +68,10 @@ public class IhmMembre extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent evt) {
 		
-		String option = "Juridiques";  //Option par defaut
+		String option = (String)combo.getSelectedItem();
 		
-		if(evt.getSource() == combo) {
-			option = (String)combo.getSelectedItem();
-			//System.out.println(option);
-		}
-		else if(evt.getSource() == boutonOK) {
+		if(evt.getSource() == boutonOK) {
+			zoneAffich.setText("");
 			refMembre.visualiserConseils(option);
 		}
 	}
